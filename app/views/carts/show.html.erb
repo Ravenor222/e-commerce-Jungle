@@ -26,7 +26,6 @@
     
         <% enhanced_cart.each do |item| %>
           <%= render 'item', product: item[:product], quantity: item[:quantity].to_i %>
-          raise "hello"
         <% end %>
       </tbody>
       <tfoot>
@@ -55,6 +54,7 @@
           data-description="Khurram Virani's Jungle Order"
           data-locale="auto"
           data-email="kvirani@gmail.com"
+          @email = data-email
           data-currency="cad">
         </script>
       <% end %>

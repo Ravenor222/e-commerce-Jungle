@@ -36,11 +36,11 @@ ActiveRecord::Schema.define(version: 20160625062916) do
   add_index "line_items", ["product_id"], name: "index_line_items_on_product_id", using: :btree
 
   create_table "orders", force: :cascade do |t|
-    t.integer  "total_cents"
+    t.integer  "total_cents",
     t.datetime "created_at",       null: false
     t.datetime "updated_at",       null: false
     t.string   "stripe_charge_id"
-    t.string   "email"
+    t.string   "email",
   end
 
   create_table "products", force: :cascade do |t|
