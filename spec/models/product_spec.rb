@@ -1,5 +1,7 @@
 require 'rails_helper'
 
+
+
 RSpec.describe Product, type: :model do
   describe 'Validations' do
     context "working?" do
@@ -37,6 +39,7 @@ RSpec.describe Product, type: :model do
           quantity: 16,
           category_id: @category.id
         }
+
         @product =  Product.new(user_params)
 
         @product.validate
